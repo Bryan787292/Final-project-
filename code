@@ -1,0 +1,95 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int room = 1;
+	char input;
+	while (1) {//game loop
+		switch (room) {
+		case 1:
+			cout << "you're in room 1, you can go south" << endl;
+			cin >> input;
+			if (input == 's')
+				room = 2;
+			break;
+		case 2:
+			cout << "you're in room 2, you can go east or north" << endl;
+			cin >> input;
+			if (input == 'e')
+				room = 3;
+			else if (input == 'n')
+				room = 1;
+			break;
+
+		case 3:
+			cout << "you're in room 3, you can go east or west" << endl;
+			cin >> input;
+			if (input == 'e')
+				room = 4;
+			else if (input == 'w')
+				room = 2;
+			break;
+		case 4:
+			cout << "you're in room 4, you can go south or west" << endl;
+			cin >> input;
+			if (input == 's')
+				room = 5;
+			else if (input == 'w')
+				room = 3;
+			break;
+		case 5:
+			cout << "you're in room 5, you can go west or north" << endl;
+			cin >> input;
+			if (input == 'w')
+				room = 6;
+			else if (input == 'n')
+				room = 4;
+			break;
+		case 6:
+			cout << "you're in room 6, you can go south or east" << endl;
+			cin >> input;
+			if (input == 's')
+				room = 7;
+			else if (input == 'e')
+				room = 5;
+			break;
+		case 7:
+			cout << "you're in room 7, you can go west or north" << endl;
+			cin >> input;
+			if (input == 'w')
+				room = 8;
+			else if (input == 'n')
+				room = 6;
+			break;
+		case 8:
+			cout << "you're in room 8, you can go south or east" << endl;
+			cin >> input;
+			if (input == 's')
+				room = 9;
+			else if (input == 'e')
+				room = 7;
+			break;
+		case 9:
+			cout << "you're in room 9, you can go west or north" << endl;
+			cin >> input;
+			if (input == 'w')
+				room = 10;
+			else if (input == 'n')
+				room = 8;
+			break;
+		case 10:
+			cout << "you're in room 10, you can only go east" << endl;
+			cin >> input;
+			if (input == 'e')
+				room = 9;
+			break;
+
+
+
+
+
+
+
+
+		}
+	}
+}
